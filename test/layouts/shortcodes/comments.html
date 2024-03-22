@@ -1,0 +1,9 @@
+{{ $data := getJSON "https://jsonplaceholder.typicode.com/comments"}}
+
+{{ range $data }}
+<div> 
+  <p>{{.name}}</p>
+  <p>{{.body}}</p>
+</div>
+<hr/>
+{{ end }}
